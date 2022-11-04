@@ -166,7 +166,7 @@ var SERVERS = {
  *   var PROXY_SERVER = 'http://abc-primo.hosted.exlibrisgroup.com'
  *   var PROXY_SERVER = 'https://abc-primo.hosted.exlibrisgroup.com:443'
  */
-var PROXY_SERVER = 'https://uosc.primo.exlibrisgroup.com:443';
+var PROXY_SERVER = 'https://uosc-psb.primo.exlibrisgroup.com:443';
 
 
 let buildParams = {
