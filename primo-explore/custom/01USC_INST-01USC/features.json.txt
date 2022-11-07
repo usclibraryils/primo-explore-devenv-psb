@@ -1,1 +1,1 @@
-{"prm-logo-after":["prm-logo-after-app-store-generated"],"prm-action-list-after":["prm-action-list-after-app-store-generated"],"prm-fines-after":["prm-fines-after-app-store-generated"],"prm-fines-overview-after":["prm-fines-overview-after-app-store-generated"],"prm-service-links-after":["remove-specific-request-for-location"],"prm-no-search-result-after":[]}
+{"prm-search-result-availability-line-after":["primo-studio-browzine"],"prm-facet-range-after":["primo-explore-date-slider"],"prm-tree-nav-after":["primo-explore-filter-data-base-by-category-search"]}
