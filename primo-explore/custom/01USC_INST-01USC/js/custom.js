@@ -1,6 +1,30 @@
 (function(){
 "use strict";
 'use strict';
+(function () {
+    "use strict";
+    "use strict";
+    var app = angular.module('viewCustom', []);
+    app.component('prmLoanAfter', {
+        bindings: { parentCtrl: '<' },
+        controller: function controller($scope) {
+            var vm = this;
+
+            this.$onInit = function () {
+                angular.forEach(vm, function (ics) {
+                    if (typeof ics === 'object' && ics.hasOwnProperty('item')) {
+                       if(ics.item.mainlocationcode == "RES_SHARE"){
+                        ics.item.alerts = ["idd"];
+                       }
+                    }
+                });  
+            };
+        }
+    });
+})();
+(function () {
+    "use strict";
+    "use strict";
 
 //Auto generated code by primo app store DO NOT DELETE!!! -START-
 //prm-facet-range-after
@@ -12,6 +36,7 @@ app.component('primoExploreDateSlider', {
 });
 
 //Auto generated code by primo app store DO NOT DELETE!!! -END-
+})();
 //Auto generated code by primo app store DO NOT DELETE!!! -START-
 (function () {
     "use strict";
@@ -22,6 +47,7 @@ app.component('primoExploreDateSlider', {
     var jQueryScript = document.createElement("script");
     jQueryScript.src = "https://code.jquery.com/jquery-3.3.1.min.js";
     document.getElementsByTagName("head")[0].appendChild(jQueryScript);
+
 
     app.component('prmTreeNavAfter', {
         bindings: { parentCtrl: '<' },
@@ -84,4 +110,5 @@ app.component('primoExploreDateSlider', {
 })();
 
 //Auto generated code by primo app store DO NOT DELETE!!! -END-
+
 })();
