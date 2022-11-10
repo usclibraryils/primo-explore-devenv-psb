@@ -1,114 +1,135 @@
 (function(){
 "use strict";
 'use strict';
-(function () {
-    "use strict";
-    "use strict";
-    var app = angular.module('viewCustom', []);
-    app.component('prmLoanAfter', {
-        bindings: { parentCtrl: '<' },
-        controller: function controller($scope) {
-            var vm = this;
 
-            this.$onInit = function () {
-                angular.forEach(vm, function (ics) {
-                    if (typeof ics === 'object' && ics.hasOwnProperty('item')) {
-                       if(ics.item.mainlocationcode == "RES_SHARE"){
-                        ics.item.alerts = ["idd"];
-                       }
-                    }
-                });  
-            };
-        }
-    });
-})();
-(function () {
-    "use strict";
-    "use strict";
+var app = angular.module('viewCustom', ['angularLoad']);
+app.component('prmLoanAfter', {
+  bindings: { parentCtrl: '<' },
+  controller: function controller($scope) {
+      var vm = this;
 
+      this.$onInit = function () {
+          angular.forEach(vm, function (ics) {
+              if (typeof ics === 'object' && ics.hasOwnProperty('item')) {
+                 if(ics.item.mainlocationcode == "RES_SHARE"){
+                  ics.item.alerts = ["idd"];
+                 }
+              }
+          });  
+      };
+  }
+});
 //Auto generated code by primo app store DO NOT DELETE!!! -START-
-//prm-facet-range-after
+/*
+    hookName is a place holder with should hold the hook name not including "prm" at the beginning and in upper camel case
+    e.g: for hook prmSearchBarAfter (in html prm-search-bar-after) it should be given "SearchBarAfter"
+ */
+app.controller('SearchResultAvailabilityLineAfterController', [function () {
+  var vm = this;
+}]);
 
+app.component('prmSearchResultAvailabilityLineAfter', {
+  bindings: { parentCtrl: '<' },
+  controller: 'SearchResultAvailabilityLineAfterController',
+  template: '\n    <primo-studio-browzine parent-ctrl="$ctrl.parentCtrl"></primo-studio-browzine>\n'
 
-app.component('primoExploreDateSlider', {
-    bindings: { parentCtrl: '<' },
-    template: '\n\n<div  ng-cloak>\n  <md-content class="prm-custom-slider">\n    <h3>      \n      <span translate="custom.nui.Date_Slider"></span>\n    </h3>\n    <md-slider-container>\n      <span translate="custom.nui.Min"></span>      \n      <md-slider flex min="{{$ctrl.parentCtrl.facetGroup.additionalData.min}}" ng-model="$ctrl.parentCtrl.facetGroup.additionalData.selectedMin" max="{{$ctrl.parentCtrl.facetGroup.additionalData.selectedMax}}" aria-label="red" id="min-slider">\n      </md-slider>\n      <md-input-container>\n        <input flex type="number" ng-model="$ctrl.parentCtrl.facetGroup.additionalData.selectedMin" aria-label="Set the minimum date range" aria-controls="min-slider">\n      </md-input-container>\n    </md-slider-container>\n    <md-slider-container>\n      <span translate="custom.nui.Max"></span>\n      <md-slider flex min="{{$ctrl.parentCtrl.facetGroup.additionalData.selectedMin}}" ng-model="$ctrl.parentCtrl.facetGroup.additionalData.selectedMax" max="{{$ctrl.parentCtrl.facetGroup.additionalData.max}}" aria-label="green" id="max-slider" class="md-accent">\n      </md-slider>\n      <md-input-container>\n        <input flex type="number" ng-model="$ctrl.parentCtrl.facetGroup.additionalData.selectedMax" aria-label="Set the maximum date range" aria-controls="max-slider">\n      </md-input-container>\n    </md-slider-container>\n\n</md-content>\n</div>\n\n'
 });
 
 //Auto generated code by primo app store DO NOT DELETE!!! -END-
-})();
+
 //Auto generated code by primo app store DO NOT DELETE!!! -START-
-(function () {
-    "use strict";
-    "use strict";
+app.constant('primoStudioBrowzineStudioConfig', [{ "journalCoverImagesEnabled": true, "journalBrowZineWebLinkTextEnabled": true, "journalBrowZineWebLinkText": "View Journal Contents", "articleBrowZineWebLinkTextEnabled": true, "articleBrowZineWebLinkText": "View Issue Contents", "articlePDFDownloadLinkEnabled": true, "articlePDFDownloadLinkText": "Download PDF", "articleLinkEnabled": true, "articleLinkText": "Read Article", "printRecordsIntegrationEnabled": true, "articlePDFDownloadViaUnpaywallEnabled": true, "articlePDFDownloadViaUnpaywallText": "Download PDF (via Unpaywall)", "articleLinkViaUnpaywallEnabled": true, "articleLinkViaUnpaywallText": "Read Article (via Unpaywall)", "articleAcceptedManuscriptPDFViaUnpaywallEnabled": true, "articleAcceptedManuscriptPDFViaUnpaywallText": "Download PDF (Accepted Manuscript via Unpaywall)", "articleAcceptedManuscriptArticleLinkViaUnpaywallEnabled": true, "articleAcceptedManuscriptArticleLinkViaUnpaywallText": "Read Article (Accepted Manuscript via Unpaywall)", "apiKey": "f1dbb8c4-fa54-415f-9f5f-8d96d08d3f6c", "libraryId": "149" }]);
+//Auto generated code by primo app store DO NOT DELETE!!! -END-
+//Auto generated code by primo app store DO NOT DELETE!!! -START-
+PrimoStudioBrowzineController.$inject = ["$scope", "primoStudioBrowzineStudioConfig"];
 
-    var app = angular.module('viewCustom', []);
+function isBrowzineLoaded() {
+  var validation = false;
+  var scripts = document.head.querySelectorAll("script");
 
-    var jQueryScript = document.createElement("script");
-    jQueryScript.src = "https://code.jquery.com/jquery-3.3.1.min.js";
-    document.getElementsByTagName("head")[0].appendChild(jQueryScript);
-
-
-    app.component('prmTreeNavAfter', {
-        bindings: { parentCtrl: '<' },
-        require: {
-            parent: '^prmTreeNav',
-            top: '^prmDatabasesCategorize'
-        },
-        controller: function controller($scope) {
-            var vm = this;
-
-            try {
-                var adaptFacetSize = function adaptFacetSize() {
-                    //if its hebrew
-                    if ($("md-card[class^='default-card']").length == 1) {
-                        if ($("html[lang^='he']").length > 0) {
-                            // hebrew
-                            var _informationCard = $(window).width() - ($("md-card[class^='default-card']").offset().left + $("md-card[class^='default-card']").outerWidth());
-
-                            $("div[id='alphabet']").css("width", _informationCard - 45);
-                            $("div[id='alphabet']").css("flex-direction", 'row-reverse');
-                        } else {
-                            // english
-                            var informationCard = $("md-card[class^='default-card']").offset().left;
-                            console.log("facetLeft " + informationCard);
-                            $("div[id='alphabet']").css("width", informationCard - 40);
-                        }
-                    }
-                };
-
-                window.onresize = adaptFacetSize;
-
-
-                vm.alphabet = {
-                    letter: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "all"]
-                };
-
-                this.$onInit = function () {
-                    var res = $("prm-tree-nav > md-list").css("display", "none");
-                    adaptFacetSize();
-                };
-
-                $scope.showValue = function (letter) {
-                    $("#hidden").val(letter);
-                };
-                $scope.getValue = function (item) {
-                    var getVal = $('#hidden').val();
-                    if (getVal == "" || getVal == "all") {
-                        return alphabet;
-                    }
-                    var lowreName = item.name.toLowerCase();
-                    return lowreName.indexOf(getVal.toLowerCase()) === 0;
-                };
-            } catch (e) {
-                console.log("ERROR");
-            }
-        },
-
-        template: ' \n    <input class="hidden" id="hidden" type="text" ng-model="letter">   \n       \n    \n    <div  id="alphabet" class="flex-container"" layout-row" layout="row">\n    <a class="letter" ng-click="showValue(letter)" ng-repeat="letter in $ctrl.alphabet.letter" translate={{letter}} href="#">{{letter}}\n    <div class="md-ripple-container" style=""></div>\n    </a> \n    </div>\n    \n    \t\n    <md-list role="list" class="md-primoExplore-theme">   \n    <md-list-item class="display-block _md" ng-repeat="item in $ctrl.parent.bdcategoryitems |filter: getValue") ng-class="{\'toggled\': item.toggled, \'has-branches\': $ctrl.parent.haveSubCategories(item)}" ng-style="$ctrl.parent.isBrowserIE() &amp;&amp; {\'display\':\'block\'}" aria-live="assertive" role="listitem" style="">\n        <div class="inner">           \n            <button class="branch-name md-button md-primoExplore-theme md-ink-ripple layout-row" type="button" ng-click="$ctrl.parent.onBranchSelect(item)" layout="row" title={{item.name}} ng-class="{\'is-selected\': item.selected}" aria-label={{item.name}}>\n                <p>{{item.name}}</p>\n                <div class="md-ripple-container" style=""></div>\n            </button>\n        </div>       \n        <div class="_md-secondary-container"/>\n    </md-list-item>\n    </<md-list>\n     '
+  if (scripts) {
+    Array.prototype.forEach.call(scripts, function (script) {
+      if (script.src.indexOf("browzine-primo-adapter") > -1) {
+        validation = true;
+      }
     });
-})();
+  }
+
+  return validation;
+};
+
+function PrimoStudioBrowzineController($scope, studioConfig) {
+  if (!isBrowzineLoaded()) {
+    if (studioConfig[0]) {
+      if (!studioConfig[0].libraryId) {
+        console.log("Missing required Primo Studio BrowZine addon field: libraryId");
+      }
+
+      if (!studioConfig[0].apiKey) {
+        console.log("Missing required Primo Studio BrowZine addon field: apiKey");
+      }
+    } else {
+      console.log("Missing Primo Studio BrowZine addon configuration: studioConfig");
+    }
+
+    window.browzine = {
+      libraryId: studioConfig[0].libraryId,
+      apiKey: studioConfig[0].apiKey,
+
+      journalCoverImagesEnabled: studioConfig[0].journalCoverImagesEnabled,
+
+      journalBrowZineWebLinkTextEnabled: studioConfig[0].journalBrowZineWebLinkTextEnabled,
+      journalBrowZineWebLinkText: studioConfig[0].journalBrowZineWebLinkText,
+
+      articleBrowZineWebLinkTextEnabled: studioConfig[0].articleBrowZineWebLinkTextEnabled,
+      articleBrowZineWebLinkText: studioConfig[0].articleBrowZineWebLinkText,
+
+      articlePDFDownloadLinkEnabled: studioConfig[0].articlePDFDownloadLinkEnabled,
+      articlePDFDownloadLinkText: studioConfig[0].articlePDFDownloadLinkText,
+
+      articleLinkEnabled: studioConfig[0].articleLinkEnabled,
+      articleLinkText: studioConfig[0].articleLinkText,
+
+      printRecordsIntegrationEnabled: studioConfig[0].printRecordsIntegrationEnabled,
+
+      unpaywallEmailAddressKey: studioConfig[0].unpaywallEmailAddressKey,
+
+      articlePDFDownloadViaUnpaywallEnabled: studioConfig[0].articlePDFDownloadViaUnpaywallEnabled,
+      articlePDFDownloadViaUnpaywallText: studioConfig[0].articlePDFDownloadViaUnpaywallText,
+
+      articleLinkViaUnpaywallEnabled: studioConfig[0].articleLinkViaUnpaywallEnabled,
+      articleLinkViaUnpaywallText: studioConfig[0].articleLinkViaUnpaywallText,
+
+      articleAcceptedManuscriptPDFViaUnpaywallEnabled: studioConfig[0].articleAcceptedManuscriptPDFViaUnpaywallEnabled,
+      articleAcceptedManuscriptPDFViaUnpaywallText: studioConfig[0].articleAcceptedManuscriptPDFViaUnpaywallText,
+
+      articleAcceptedManuscriptArticleLinkViaUnpaywallEnabled: studioConfig[0].articleAcceptedManuscriptArticleLinkViaUnpaywallEnabled,
+      articleAcceptedManuscriptArticleLinkViaUnpaywallText: studioConfig[0].articleAcceptedManuscriptArticleLinkViaUnpaywallText
+    };
+
+    window.browzine.script = document.createElement("script");
+    window.browzine.script.src = "https://s3.amazonaws.com/browzine-adapters/primo/browzine-primo-adapter.js";
+    window.document.head.appendChild(window.browzine.script);
+  }
+
+  (function poll() {
+    if (isBrowzineLoaded() && window.browzine.primo) {
+      window.browzine.primo.searchResult($scope);
+    } else {
+      requestAnimationFrame(poll);
+    }
+  })();
+};
+
+var PrimoStudioBrowzineComponent = {
+  selector: "primoStudioBrowzine",
+  controller: PrimoStudioBrowzineController,
+  bindings: { parentCtrl: "<" }
+};
+
+var PrimoStudioBrowzineModule = angular.module("primoStudioBrowzine", []).component(PrimoStudioBrowzineComponent.selector, PrimoStudioBrowzineComponent).name;
+
+app.requires.push(PrimoStudioBrowzineModule);
 
 //Auto generated code by primo app store DO NOT DELETE!!! -END-
-
 })();

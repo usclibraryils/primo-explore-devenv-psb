@@ -1,1 +1,1 @@
-{"prm-search-result-availability-line-after":["primo-studio-browzine"],"prm-facet-range-after":["primo-explore-date-slider"],"prm-tree-nav-after":["primo-explore-filter-data-base-by-category-search"]}
+{"prm-search-result-availability-line-after":["primo-studio-browzine"]}
