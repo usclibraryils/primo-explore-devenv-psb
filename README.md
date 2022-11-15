@@ -2,7 +2,8 @@
 
 
 # The Primo New UI Customization Workflow Development Environment
-
+ - For Primo VE customers, add the --ve flag :
+      `gulp run --view 01USC_INST-01USC --ve`
 
 ## Structure
 

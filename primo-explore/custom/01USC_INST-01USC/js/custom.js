@@ -4,128 +4,373 @@
 
 var app = angular.module('viewCustom', ['angularLoad']);
 
-app.component('prmLoanAfter', {
-  bindings: { parentCtrl: '<' },
-  controller: function controller($scope) {
-      var vm = this;
+//Auto generated code by primo app store DO NOT DELETE!!! -START-
+/*
+    hookName is a place holder with should hold the hook name not including "prm" at the beginning and in upper camel case
+    e.g: for hook prmSearchBarAfter (in html prm-search-bar-after) it should be given "SearchBarAfter"
+ */
+app.controller('FullViewAfterController', [function () {
+    var vm = this;
+}]);
 
-      this.$onInit = function () {
-          angular.forEach(vm, function (ics) {
-              if (typeof ics === 'object' && ics.hasOwnProperty('item')) {
-                 if(ics.item.mainlocationcode == "RES_SHARE"){
-                  ics.item.alerts.push("idd");
-                 }
-              }
-          });  
-      };
-  }
+app.component('prmFullViewAfter', {
+    bindings: { parentCtrl: '<' },
+    controller: 'FullViewAfterController',
+    template: '\n    <primo-studio-altmetrics parent-ctrl="$ctrl.parentCtrl"></primo-studio-altmetrics>\n'
+
 });
+
+//Auto generated code by primo app store DO NOT DELETE!!! -END-
+
 //Auto generated code by primo app store DO NOT DELETE!!! -START-
 /*
     hookName is a place holder with should hold the hook name not including "prm" at the beginning and in upper camel case
     e.g: for hook prmSearchBarAfter (in html prm-search-bar-after) it should be given "SearchBarAfter"
  */
 app.controller('SearchResultAvailabilityLineAfterController', [function () {
-  var vm = this;
+    var vm = this;
 }]);
 
 app.component('prmSearchResultAvailabilityLineAfter', {
-  bindings: { parentCtrl: '<' },
-  controller: 'SearchResultAvailabilityLineAfterController',
-  template: '\n    <primo-studio-browzine parent-ctrl="$ctrl.parentCtrl"></primo-studio-browzine>\n'
+    bindings: { parentCtrl: '<' },
+    controller: 'SearchResultAvailabilityLineAfterController',
+    template: '\n    <primo-studio-browzine parent-ctrl="$ctrl.parentCtrl"></primo-studio-browzine>\n'
 
 });
 
 //Auto generated code by primo app store DO NOT DELETE!!! -END-
 
 //Auto generated code by primo app store DO NOT DELETE!!! -START-
-app.constant('primoStudioBrowzineStudioConfig', [{ "journalCoverImagesEnabled": true, "journalBrowZineWebLinkTextEnabled": true, "journalBrowZineWebLinkText": "View Journal Contents", "articleBrowZineWebLinkTextEnabled": true, "articleBrowZineWebLinkText": "View Issue Contents", "articlePDFDownloadLinkEnabled": true, "articlePDFDownloadLinkText": "Download PDF", "articleLinkEnabled": true, "articleLinkText": "Read Article", "printRecordsIntegrationEnabled": true, "articlePDFDownloadViaUnpaywallEnabled": true, "articlePDFDownloadViaUnpaywallText": "Download PDF (via Unpaywall)", "articleLinkViaUnpaywallEnabled": true, "articleLinkViaUnpaywallText": "Read Article (via Unpaywall)", "articleAcceptedManuscriptPDFViaUnpaywallEnabled": true, "articleAcceptedManuscriptPDFViaUnpaywallText": "Download PDF (Accepted Manuscript via Unpaywall)", "articleAcceptedManuscriptArticleLinkViaUnpaywallEnabled": true, "articleAcceptedManuscriptArticleLinkViaUnpaywallText": "Read Article (Accepted Manuscript via Unpaywall)", "apiKey": "f1dbb8c4-fa54-415f-9f5f-8d96d08d3f6c", "libraryId": "149" }]);
+app.constant('primoStudioAltmetricsStudioConfig', [{ "badgetype": "medium-donut" }]);
+//Auto generated code by primo app store DO NOT DELETE!!! -END-
+//Auto generated code by primo app store DO NOT DELETE!!! -START-
+(function () {
+    function r(e, n, t) {
+        function o(i, f) {
+            if (!n[i]) {
+                if (!e[i]) {
+                    var c = "function" == typeof require && require;if (!f && c) return c(i, !0);if (u) return u(i, !0);var a = new Error("Cannot find module '" + i + "'");throw a.code = "MODULE_NOT_FOUND", a;
+                }var p = n[i] = { exports: {} };e[i][0].call(p.exports, function (r) {
+                    var n = e[i][1][r];return o(n || r);
+                }, p, p.exports, r, e, n, t);
+            }return n[i].exports;
+        }for (var u = "function" == typeof require && require, i = 0; i < t.length; i++) {
+            o(t[i]);
+        }return o;
+    }return r;
+})()({ 1: [function (require, module, exports) {
+        'use strict';
+
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+
+        var _altmetrics = require('./altmetrics.controller');
+
+        var _altmetrics2 = _interopRequireDefault(_altmetrics);
+
+        function _interopRequireDefault(obj) {
+            return obj && obj.__esModule ? obj : { default: obj };
+        }
+
+        /*
+         * altmetrics.component.js
+         */
+
+        var altmetricsTemplate = '<div id="altmetric_badge"\n    ng-if="$ctrl.altmetric_id"\n    class="altmetric-embed"\n    data-hide-no-mentions="true"\n    data-link-target="new"\n    data-badge-type="{{$ctrl.altmetric_badge_type}}"\n    data-badge-details="right"\n    data-altmetric-id="{{$ctrl.altmetric_id}}">\n</div>\n';
+
+        var PrimoStudioAltmetricsComponent = {
+            selector: 'primoStudioAltmetrics',
+            controller: _altmetrics2.default,
+            bindings: { parentCtrl: '<' },
+            template: altmetricsTemplate
+        };
+
+        exports.default = PrimoStudioAltmetricsComponent;
+    }, { "./altmetrics.controller": 2 }], 2: [function (require, module, exports) {
+        'use strict';
+
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+
+        var _createClass = function () {
+            function defineProperties(target, props) {
+                for (var i = 0; i < props.length; i++) {
+                    var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+                }
+            }return function (Constructor, protoProps, staticProps) {
+                if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+            };
+        }();
+
+        function _classCallCheck(instance, Constructor) {
+            if (!(instance instanceof Constructor)) {
+                throw new TypeError("Cannot call a class as a function");
+            }
+        }
+
+        /*
+         * altmetrics.controller.js
+         *
+         * https://github.com/Det-Kongelige-Bibliotek/primo-explore-rex
+         * https://developers.exlibrisgroup.com/blog/Adding-Altmetrics-to-your-Primo-Full-Record-Display
+         */
+
+        var PrimoStudioAltmetricsController = function () {
+            function PrimoStudioAltmetricsController(angularLoad, studioConfig, $http, $scope, $element, $timeout, $window) {
+                _classCallCheck(this, PrimoStudioAltmetricsController);
+
+                this.angularLoad = angularLoad;
+                this.studioConfig = studioConfig;
+                this.$http = $http;
+                this.$scope = $scope;
+                this.$element = $element;
+                this.$timeout = $timeout;
+                this.$window = $window;
+            }
+
+            _createClass(PrimoStudioAltmetricsController, [{
+                key: 'getConfigApiKey',
+                value: function getConfigApiKey() {
+                    return this.studioConfig[0].apikey || '';
+                }
+            }, {
+                key: 'getConfigISBN',
+                value: function getConfigISBN() {
+                    return this.studioConfig[0].isbn || '';
+                }
+            }, {
+                key: 'getConfigBadgeType',
+                value: function getConfigBadgeType() {
+                    return this.studioConfig[0].badgetype || 'medium-donut';
+                }
+            }, {
+                key: '$onInit',
+                value: function $onInit() {
+
+                    var vm = this;
+
+                    vm.embed_js = '';
+                    vm.altmetric_id = '';
+                    vm.altmetric_badge_type = vm.getConfigBadgeType();
+                    vm.altmetric_key = vm.getConfigApiKey();
+
+                    // the prm-full-view container, our parent is prm-full-view-after
+                    vm.parentElement = vm.$element.parent().parent()[0];
+
+                    vm.api = 'doi';
+                    try {
+                        vm.doi = vm.parentCtrl.item.pnx.addata.doi[0] || '';
+                    } catch (e) {
+                        try {
+                            if (vm.getConfigISBN()) {
+                                vm.doi = vm.parentCtrl.item.pnx.addata.isbn[0] || '';
+                                vm.api = 'isbn';
+                            }
+                        } catch (e) {
+                            return;
+                        }
+                    }
+
+                    if (vm.doi) {
+                        // If we've got a doi to work with check whether altmetrics has data for it.
+                        // If so, make our div visible and create a new Altmetrics service
+                        vm.$timeout(function () {
+                            vm.$http.get('https://api.altmetric.com/v1/' + vm.api + '/' + vm.doi).then(function (res) {
+                                vm.altmetric_id = res.data.altmetric_id;
+                                // Get the altmetrics widget
+                                vm.embed_js = 'https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js?' + Date.now();
+                                vm.angularLoad.loadScript(vm.embed_js).then(function () {
+                                    // Create our new Primo service
+                                    var altmetricsSection = {
+                                        scrollId: 'altmetrics',
+                                        serviceName: 'altmetrics',
+                                        title: 'brief.results.tabs.Altmetrics'
+                                    };
+                                    vm.parentCtrl.services.splice(vm.parentCtrl.services.length, 0, altmetricsSection);
+                                }, function (res) {
+                                    console.log('altmetric loadScript failed: ' + res);
+                                });
+                            }, function (res) {
+                                console.log('altmetric api failed: ' + res);
+                            });
+                        }, 3000);
+                    }
+
+                    // move the altmetrics widget into the new Altmetrics service section
+                    var unbindWatcher = vm.$scope.$watch(function () {
+                        return vm.parentElement.querySelector('h4[translate="brief.results.tabs.Altmetrics"]');
+                    }, function (newVal, _oldVal) {
+                        if (newVal) {
+                            // Get the section body associated with the value we're watching
+                            var sectionBody = newVal.parentElement.parentElement.parentElement.parentElement.children[1];
+                            if (sectionBody && sectionBody.appendChild) {
+                                sectionBody.appendChild(vm.$element[0]);
+                            }
+                            unbindWatcher();
+                        }
+                    });
+                }
+            }, {
+                key: '$onDestroy',
+                value: function $onDestroy() {
+                    var vm = this;
+                    var el = null;
+
+                    if (vm.$window._altmetric) {
+                        delete vm.$window._altmetric;
+                    }
+
+                    // remove altmetric css/js
+                    if (vm.embed_js) {
+                        el = document.body.querySelector('[src="' + vm.embed_js + '"]');
+                        if (el) {
+                            el.remove();
+                        }
+                        vm.embed_js = '';
+                    }
+                    document.body.querySelectorAll('script', function (script) {
+                        if (script.src.startsWith('https://api.altmetric.com/v1/id/')) {
+                            script.parentNode.removeChild(script);
+                        }
+                    });
+
+                    el = document.head.querySelector('link[id="altmetric-embed-css"]');
+                    if (el) {
+                        el.remove();
+                    }
+                    el = document.head.querySelector('script[id="altmetric-embed-js"]');
+                    if (el) {
+                        el.remove();
+                    }
+                }
+            }]);
+
+            return PrimoStudioAltmetricsController;
+        }();
+
+        PrimoStudioAltmetricsController.$inject = ['angularLoad', 'primoStudioAltmetricsStudioConfig', '$http', '$scope', '$element', '$timeout', '$window'];
+
+        exports.default = PrimoStudioAltmetricsController;
+    }, {}], 3: [function (require, module, exports) {
+        'use strict';
+
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        exports.PrimoStudioAltmetricsModule = undefined;
+
+        var _altmetrics = require('./altmetrics.component');
+
+        var _altmetrics2 = _interopRequireDefault(_altmetrics);
+
+        function _interopRequireDefault(obj) {
+            return obj && obj.__esModule ? obj : { default: obj };
+        }
+
+        var PrimoStudioAltmetricsModule = exports.PrimoStudioAltmetricsModule = angular.module('primoStudioAltmetrics', []).component(_altmetrics2.default.selector, _altmetrics2.default).name; /**
+                                                                                                                                                                                                  * altmetrics.module.js
+                                                                                                                                                                                                  */
+    }, { "./altmetrics.component": 1 }], 4: [function (require, module, exports) {
+        'use strict';
+
+        var _altmetrics = require('./js/altmetrics.module');
+
+        app.requires.push(_altmetrics.PrimoStudioAltmetricsModule); /**
+                                                                     * main.js
+                                                                     */
+    }, { "./js/altmetrics.module": 3 }] }, {}, [4]);
+
+//Auto generated code by primo app store DO NOT DELETE!!! -END-
+//Auto generated code by primo app store DO NOT DELETE!!! -START-
+app.constant('primoStudioBrowzineStudioConfig', [{ "journalCoverImagesEnabled": true, "journalBrowZineWebLinkTextEnabled": true, "journalBrowZineWebLinkText": "View Journal Contents", "articleBrowZineWebLinkTextEnabled": true, "articleBrowZineWebLinkText": "View Issue Contents", "articlePDFDownloadLinkEnabled": true, "articlePDFDownloadLinkText": "Download PDF", "articleLinkEnabled": true, "articleLinkText": "Read Article", "printRecordsIntegrationEnabled": true, "articlePDFDownloadViaUnpaywallEnabled": true, "articlePDFDownloadViaUnpaywallText": "Download PDF (via Unpaywall)", "articleLinkViaUnpaywallEnabled": true, "articleLinkViaUnpaywallText": "Read Article (via Unpaywall)", "articleAcceptedManuscriptPDFViaUnpaywallEnabled": true, "articleAcceptedManuscriptPDFViaUnpaywallText": "Download PDF (Accepted Manuscript via Unpaywall)", "articleAcceptedManuscriptArticleLinkViaUnpaywallEnabled": true, "articleAcceptedManuscriptArticleLinkViaUnpaywallText": "Read Article (Accepted Manuscript via Unpaywall)", "libraryId": "149", "apiKey": "f1dbb8c4-fa54-415f-9f5f-8d96d08d3f6c" }]);
 //Auto generated code by primo app store DO NOT DELETE!!! -END-
 //Auto generated code by primo app store DO NOT DELETE!!! -START-
 PrimoStudioBrowzineController.$inject = ["$scope", "primoStudioBrowzineStudioConfig"];
 
 function isBrowzineLoaded() {
-  var validation = false;
-  var scripts = document.head.querySelectorAll("script");
+    var validation = false;
+    var scripts = document.head.querySelectorAll("script");
 
-  if (scripts) {
-    Array.prototype.forEach.call(scripts, function (script) {
-      if (script.src.indexOf("browzine-primo-adapter") > -1) {
-        validation = true;
-      }
-    });
-  }
+    if (scripts) {
+        Array.prototype.forEach.call(scripts, function (script) {
+            if (script.src.indexOf("browzine-primo-adapter") > -1) {
+                validation = true;
+            }
+        });
+    }
 
-  return validation;
+    return validation;
 };
 
 function PrimoStudioBrowzineController($scope, studioConfig) {
-  if (!isBrowzineLoaded()) {
-    if (studioConfig[0]) {
-      if (!studioConfig[0].libraryId) {
-        console.log("Missing required Primo Studio BrowZine addon field: libraryId");
-      }
+    if (!isBrowzineLoaded()) {
+        if (studioConfig[0]) {
+            if (!studioConfig[0].libraryId) {
+                console.log("Missing required Primo Studio BrowZine addon field: libraryId");
+            }
 
-      if (!studioConfig[0].apiKey) {
-        console.log("Missing required Primo Studio BrowZine addon field: apiKey");
-      }
-    } else {
-      console.log("Missing Primo Studio BrowZine addon configuration: studioConfig");
+            if (!studioConfig[0].apiKey) {
+                console.log("Missing required Primo Studio BrowZine addon field: apiKey");
+            }
+        } else {
+            console.log("Missing Primo Studio BrowZine addon configuration: studioConfig");
+        }
+
+        window.browzine = {
+            libraryId: studioConfig[0].libraryId,
+            apiKey: studioConfig[0].apiKey,
+
+            journalCoverImagesEnabled: studioConfig[0].journalCoverImagesEnabled,
+
+            journalBrowZineWebLinkTextEnabled: studioConfig[0].journalBrowZineWebLinkTextEnabled,
+            journalBrowZineWebLinkText: studioConfig[0].journalBrowZineWebLinkText,
+
+            articleBrowZineWebLinkTextEnabled: studioConfig[0].articleBrowZineWebLinkTextEnabled,
+            articleBrowZineWebLinkText: studioConfig[0].articleBrowZineWebLinkText,
+
+            articlePDFDownloadLinkEnabled: studioConfig[0].articlePDFDownloadLinkEnabled,
+            articlePDFDownloadLinkText: studioConfig[0].articlePDFDownloadLinkText,
+
+            articleLinkEnabled: studioConfig[0].articleLinkEnabled,
+            articleLinkText: studioConfig[0].articleLinkText,
+
+            printRecordsIntegrationEnabled: studioConfig[0].printRecordsIntegrationEnabled,
+
+            unpaywallEmailAddressKey: studioConfig[0].unpaywallEmailAddressKey,
+
+            articlePDFDownloadViaUnpaywallEnabled: studioConfig[0].articlePDFDownloadViaUnpaywallEnabled,
+            articlePDFDownloadViaUnpaywallText: studioConfig[0].articlePDFDownloadViaUnpaywallText,
+
+            articleLinkViaUnpaywallEnabled: studioConfig[0].articleLinkViaUnpaywallEnabled,
+            articleLinkViaUnpaywallText: studioConfig[0].articleLinkViaUnpaywallText,
+
+            articleAcceptedManuscriptPDFViaUnpaywallEnabled: studioConfig[0].articleAcceptedManuscriptPDFViaUnpaywallEnabled,
+            articleAcceptedManuscriptPDFViaUnpaywallText: studioConfig[0].articleAcceptedManuscriptPDFViaUnpaywallText,
+
+            articleAcceptedManuscriptArticleLinkViaUnpaywallEnabled: studioConfig[0].articleAcceptedManuscriptArticleLinkViaUnpaywallEnabled,
+            articleAcceptedManuscriptArticleLinkViaUnpaywallText: studioConfig[0].articleAcceptedManuscriptArticleLinkViaUnpaywallText
+        };
+
+        window.browzine.script = document.createElement("script");
+        window.browzine.script.src = "https://s3.amazonaws.com/browzine-adapters/primo/browzine-primo-adapter.js";
+        window.document.head.appendChild(window.browzine.script);
     }
 
-    window.browzine = {
-      libraryId: studioConfig[0].libraryId,
-      apiKey: studioConfig[0].apiKey,
-
-      journalCoverImagesEnabled: studioConfig[0].journalCoverImagesEnabled,
-
-      journalBrowZineWebLinkTextEnabled: studioConfig[0].journalBrowZineWebLinkTextEnabled,
-      journalBrowZineWebLinkText: studioConfig[0].journalBrowZineWebLinkText,
-
-      articleBrowZineWebLinkTextEnabled: studioConfig[0].articleBrowZineWebLinkTextEnabled,
-      articleBrowZineWebLinkText: studioConfig[0].articleBrowZineWebLinkText,
-
-      articlePDFDownloadLinkEnabled: studioConfig[0].articlePDFDownloadLinkEnabled,
-      articlePDFDownloadLinkText: studioConfig[0].articlePDFDownloadLinkText,
-
-      articleLinkEnabled: studioConfig[0].articleLinkEnabled,
-      articleLinkText: studioConfig[0].articleLinkText,
-
-      printRecordsIntegrationEnabled: studioConfig[0].printRecordsIntegrationEnabled,
-
-      unpaywallEmailAddressKey: studioConfig[0].unpaywallEmailAddressKey,
-
-      articlePDFDownloadViaUnpaywallEnabled: studioConfig[0].articlePDFDownloadViaUnpaywallEnabled,
-      articlePDFDownloadViaUnpaywallText: studioConfig[0].articlePDFDownloadViaUnpaywallText,
-
-      articleLinkViaUnpaywallEnabled: studioConfig[0].articleLinkViaUnpaywallEnabled,
-      articleLinkViaUnpaywallText: studioConfig[0].articleLinkViaUnpaywallText,
-
-      articleAcceptedManuscriptPDFViaUnpaywallEnabled: studioConfig[0].articleAcceptedManuscriptPDFViaUnpaywallEnabled,
-      articleAcceptedManuscriptPDFViaUnpaywallText: studioConfig[0].articleAcceptedManuscriptPDFViaUnpaywallText,
-
-      articleAcceptedManuscriptArticleLinkViaUnpaywallEnabled: studioConfig[0].articleAcceptedManuscriptArticleLinkViaUnpaywallEnabled,
-      articleAcceptedManuscriptArticleLinkViaUnpaywallText: studioConfig[0].articleAcceptedManuscriptArticleLinkViaUnpaywallText
-    };
-
-    window.browzine.script = document.createElement("script");
-    window.browzine.script.src = "https://s3.amazonaws.com/browzine-adapters/primo/browzine-primo-adapter.js";
-    window.document.head.appendChild(window.browzine.script);
-  }
-
-  (function poll() {
-    if (isBrowzineLoaded() && window.browzine.primo) {
-      window.browzine.primo.searchResult($scope);
-    } else {
-      requestAnimationFrame(poll);
-    }
-  })();
+    (function poll() {
+        if (isBrowzineLoaded() && window.browzine.primo) {
+            window.browzine.primo.searchResult($scope);
+        } else {
+            requestAnimationFrame(poll);
+        }
+    })();
 };
 
 var PrimoStudioBrowzineComponent = {
-  selector: "primoStudioBrowzine",
-  controller: PrimoStudioBrowzineController,
-  bindings: { parentCtrl: "<" }
+    selector: "primoStudioBrowzine",
+    controller: PrimoStudioBrowzineController,
+    bindings: { parentCtrl: "<" }
 };
 
 var PrimoStudioBrowzineModule = angular.module("primoStudioBrowzine", []).component(PrimoStudioBrowzineComponent.selector, PrimoStudioBrowzineComponent).name;
@@ -134,153 +379,42 @@ app.requires.push(PrimoStudioBrowzineModule);
 
 //Auto generated code by primo app store DO NOT DELETE!!! -END-
 
-
-// AEON links
-app.controller('RequestServicesAfterController', [function () {
-  var vm = this;
-}]);
-
-app.component('prmRequestServicesAfter', {
-  bindings: { parentCtrl: '<' },
-  controller: 'RequestServicesAfterController',
-  template: `<remove-specific-request-for-location parent-ctrl="$ctrl.parentCtrl"></remove-specific-request-for-location>`
-
-});
-
-app.component('almaHowovpAfter', {
-  bindings: { parentCtrl: '<' },
-  controller: 'RequestServicesAfterController',
-  template: `<remove-specific-request-for-location parent-ctrl="$ctrl.parentCtrl"></remove-specific-request-for-location>`
-
-});
-
-app.constant('removeSpecificRequestForLocationStudioConfig', [
-  { "type": "AEON", "libraryCode": "SPECCOLL", "subLocationCode": "spe-lv7fmo, spe-lv7fml,spe-vltarc, spe-dmlfac, spe-graarc, spe-arc, spe-aav, spe-bkmar8, spe-bkmav7, spe-bkmst8, spe-bkmcr8, spe-bkmco8, spe-bkmcs8, spe-elb238, spe-elb343, spe-bkmofc, spe-bkmmf8, spe-bkmov8, spe-dml233, spe-bkmso8, spe-dml205, spe-dml207, spe-dml208, spe-209A, spe-dml214, spe-ealarc, spe-ealeas, spe-fml, spe-fmo, spe-hol, spe-hov, spe-hor, spe-ofc, spe-mfr, spe-lv7rar, spe-lv8rar, spe-grarar, spe-lv7rfl, spe-lv8rfl, spe-lv7rm, spe-lv7rov, spe-lv8rov, spe-lv7sm, spe-lv7rso, spe-lv8rso, spe-eassto, UNASSIGNED, spe-vlt, spe-vltbrg, spe-vltbwi, spe-vltcre, spe-vltflt, spe-vltovr, spe-vltwid, spe-vla", "displayLabel": "Request from Special Collections" },
-  { "type": "AEON", "libraryCode": "CINEMA", "subLocationCode": "cin-cag, cin-cgo, cin-cgs", "displayLabel": "Request from Cinema Arts Library" },
-  { "type": "AEON", "libraryCode": "ONEARCHIVE", "subLocationCode": "one-arc, one-stk, one-exb, one-gpf, one-lpf, one-ovr, one-pmo, one-pam, one-prr, one-plf, one-ref", "displayLabel": "Request from ONE Archives" },
-  { "type": "ILL", "displayLabel": "Request for Interlibrary Loan/Home Delivery", "genres": ['book', 'bookitem', 'conference', 'journal']},
-  { "type": "ILL", "displayLabel": "Request via interlibrary loan (Health Science Libraries)", "genres": ['article', 'proceeding']},
-{ "type": "ILL", "displayLabel": "Request via interlibrary loan (Law Library)", "genres": ['article', 'proceeding', 'book', 'bookitem', 'conference', 'journal']}
-]);
-
-app.constant('aeonLocationsInternalExternalMap',
-  {"spe-lv7fml": "DML LEVEL 7 FML BOOKS", "spe-lv7fmo": "DML LEVEL 7 OVERSIZE FML BOOKS", "spe-dmlfac": "DML FACULTY HALL", "spe-ealeas": "EAST ASIAN STORAGE EAST", "spe-graarc": "ARCHIVES GRAND", "spe-elb238": "BOECKMANN EAST 238", "spe-elb343": "BOECKMANN EAST 343-344", "spe-grarar": "RARE-BOOKS-GRAND", "spe-eassto": "SPECIAL COLLECTIONS EAST STORAGE", "spe-vltbrg": "VAULT-244B-REG", "spe-vltbwi": "VAULT-244B-WIDE", "spe-vltcre": "VAULT-244C-REG", "spe-vltflt": "VAULT-FLAT", "spe-vltovr": "VAULT-OVER", "spe-vltwid": "VAULT-WIDE", "cin-eassto": "EAST STORAGE"}
-);
-
-app.controller('removeSpecificRequestForLocationController', ['removeSpecificRequestForLocationStudioConfig', '$scope','$timeout','$translate', 'aeonLocationsInternalExternalMap', function (addonParameters, $scope, $timeout, $translate, aeonLocationsInternalExternalMap) {
-  var vm = this.parentCtrl;
-  var services2;
-  var servicesWithReolvedLinks;
-  var fakeGuest = false;
-  this.getFakeGuest = getFakeGuest;
-  this.$onInit = function () {
-      if (!this.parentCtrl.isLoggedIn()){
-          fakeGuest = true;
-
-          this.parentCtrl.isLoggedIn = function() {
-              return true;
-          };
-
-          if (this.parentCtrl.getServicesFromIls) {
-              this.parentCtrl.getServicesFromIls();
-          } else if (this.parentCtrl.getHowToGetitServicesFromIls) {
-              this.parentCtrl.getHowToGetitServicesFromIls();
-          }
-      }
-
-      $scope.$watch(function () {
-          return vm.services.serviceinfo ? vm.services.serviceinfo : undefined;
-      }, function () {
-          if ((!services2 && vm.services.serviceinfo) || (vm.services.serviceinfo && services2 && services2.length !== vm.services.serviceinfo.length)) {
-              services2 = vm.services.serviceinfo;
-              calculateRemove();
-          } else {
-              services2 = vm.services.serviceinfo;
-          }
-      });
-  };
-
-  function getFakeGuest(){
-      return fakeGuest;
-  }
-
-  function calculateRemove() {
-      for (let addonParameter of addonParameters) {
-          var type = addonParameter.type;
-          var libraryCode = addonParameter.libraryCode;
-          var subLocationCodes = addonParameter.subLocationCode;
-          var displayLabel = addonParameter.displayLabel;
-          var subLocationCode = subLocationCodes ? subLocationCodes.split(/\s*,\s*/) : subLocationCodes;
-          var holding = [];
-
-          if (type === "AEON" && vm.item.delivery.holding) {
-              holding = vm.item.delivery.holding.filter(function (holding) {
-                  return libraryCode === holding.libraryCode;
-              }).filter(function (holding) {
-                  return subLocationCode.indexOf(holding.subLocationCode) !== -1;
-              });
-          }
-
-          var aeonAndHolding = (type === "AEON" && holding.length === 0);
-          if (services2.length > 0 && aeonAndHolding) {
-              services2 = services2.filter(function (e) {
-                  return displayLabel !== e.type;
-              });
-          }
-          else {
-              if (services2.length > 0) {
-                  services2.forEach((service) => {
-                      if (service.type === displayLabel) {
-                          if (holding.length > 0 || type === "ILL") {
-                              if (type === 'AEON') {
-                                  let match = holding[0];
-                                  let link = service['link-to-service'];
-                                  link = link.replace(/location=[^&]*(&)?/, 'location=' + (aeonLocationsInternalExternalMap[match.subLocationCode] ? aeonLocationsInternalExternalMap[match.subLocationCode] : match.subLocation).toLowerCase() + '$1');
-                                  link = link.replace(/callnum=[^&]*(&)?/, 'callnum=' + match.callNumber + '$1');
-                                  service['link-to-service'] = link;
-                              }
-
-                              if (servicesWithReolvedLinks === undefined) {
-                                  servicesWithReolvedLinks = [];
-                              }
-                              servicesWithReolvedLinks.push(service);
-                          }
-                      }
-                  });
-              }
-          }
-      }
-      vm.services.serviceinfo = fakeGuest ? angular.copy(servicesWithReolvedLinks) : services2;
-      servicesWithReolvedLinks = [];
-  }
-}]);
-
-app.component('removeSpecificRequestForLocation', {
-  controller: 'removeSpecificRequestForLocationController',
-  bindings: { parentCtrl: '<' },
-  template:`<div ng-if="$ctrl.getFakeGuest()" layout="row" class="bar alert-bar zero-margin-bottom" layout-align="center center">
-              <span class="bar-text margin-right-small" translate="nui.request.signin"></span>
-              <prm-authentication [is-logged-in]="false" flex="none"></prm-authentication>
-            </div>`
-});
-
-
+  
 // END AEON Links
-/************************************* BEGIN libchat*************************************/
-
-(function () {
-  var lc = document.createElement('script');
-  lc.type = 'text/javascript';
-  lc.async = 'true';
-  lc.src = 'https://v2.libanswers.com/load_chat.php?hash=1c9c8f1c98973f6f2d0ca54e7ccfabf9';
-  var s = document.getElementsByTagName('script')[0]; 
-s.parentNode.insertBefore(lc, s);
-})();
-
-/************************************* END libchat widget *************************************/
-/*Add Report a Problem Link below Send To*/
-app.component('prmActionListAfter', {
-  template: '<br><a href="https://libraries.usc.edu/form/need-help-report-problem" referrerpolicy="no-referrer-when-downgrade" target="_blank" style="float:right;" class="md-primoExplore-theme"><b>Need Help? Report a Problem</b></a>'
+// IDD Renewal Notice
+app.component('prmLoanAfter', {
+    bindings: { parentCtrl: '<' },
+    controller: function controller($scope) {
+        var vm = this;
+  
+        this.$onInit = function () {
+            angular.forEach(vm, function (ics) {
+                if (typeof ics === 'object' && ics.hasOwnProperty('item')) {
+                   if(ics.item.mainlocationcode == "RES_SHARE"){
+                    ics.item.alerts.push("idd");
+                   }
+                }
+            });  
+        };
+    }
 });
-/*End of Add Report a Problem Link below Send To*/
+//End of IDD Renewal Notice
+  /*Add Report a Problem Link below Send To*/
+  app.component('prmActionListAfter', {
+    template: '<br><a href="https://libraries.usc.edu/form/need-help-report-problem" referrerpolicy="no-referrer-when-downgrade" target="_blank" style="float:right;" class="md-primoExplore-theme"><b>Need Help? Report a Problem</b></a>'
+  });
+  /*End of Add Report a Problem Link below Send To*/
 })();
+/************************************* BEGIN libchat*************************************/
+(function () {
+    var lc = document.createElement('script');
+    lc.type = 'text/javascript';
+    lc.async = 'true';
+    lc.src = 'https://v2.libanswers.com/load_chat.php?hash=1c9c8f1c98973f6f2d0ca54e7ccfabf9';
+    var s = document.getElementsByTagName('script')[0]; 
+  s.parentNode.insertBefore(lc, s);
+  })();
+  
+  /************************************* END libchat widget *************************************/
+
+  
