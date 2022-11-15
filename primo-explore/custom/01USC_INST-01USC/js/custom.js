@@ -392,13 +392,20 @@ app.component('prmLoanAfter', {
                 if (typeof ics === 'object' && ics.hasOwnProperty('item')) {
                    if(ics.item.mainlocationcode == "RES_SHARE"){
                     ics.item.alerts.push("idd");
+                    ics.notRenewableReasonsArray[0] = "Please contact the IDD to renew this item.";
+                    //ics.translationService.translationTable["nui.loans.notRenewable"] = "Please contact the IDD to renew this item.";  
+                    var prmloan = document.querySelectorAll('prm-loan')[ics.index-1];
+                    prmloan.querySelectorAll('div.list-item-actions')[0].outerHTML = '<div layout-align="start center" layout="row" flex="20" flex-xs="100" class="list-item-actions layout-align-start-center layout-row flex-xs-100 flex-20"><!----><!----><!----><!----><div class="not-renewable weak-text layout-align-start-center" aria-label="Please contact IDD for renewal" aria-hidden="false" layout-align="start center"><!----><prm-icon ng-if="$ctrl.isNotRenewable" icon-type="svg" svg-icon-set="primo-ui" icon-definition="lock"><!----><md-icon md-svg-icon="primo-ui:lock" role="presentation" class="md-primoExplore-theme"><svg id="lock_cache86" width="100%" height="100%" viewBox="0 0 24 24" y="1320" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"></path></svg></md-icon><!----><!----><prm-icon-after parent-ctrl="$ctrl"></prm-icon-after></prm-icon><!----><!----><!----><span ng-if="$ctrl.isNotRenewable" translate="nui.loans.idd">Contact IDD for renewal.</span><!----> <!----><div aria-hidden="true" class="md-tooltip-container" aria-label="" md-labeled-by-tooltip="md-tooltip-70"><!----><!----></div><!----><div ng-if="$ctrl.notRenewableReasonsArray.length > 0" class="accessible-only"><span class="popover animate-popover" translate="nui.loans.cannotRenewThisItem">Please contact IDD for renewal</span><br><!----><!----><span ng-if="::$ctrl.isNotRenewableWithCause" class="tooltip-content" ng-repeat="reason in $ctrl.notRenewableReasonsArray | limitTo:2">idd@usc.edu<br></span><!----><!----><!----><span ng-if="::$ctrl.isNotRenewableWithCause" class="tooltip-content" ng-repeat="reason in $ctrl.notRenewableReasonsArray | limitTo:2">Item renew period exceeded<br></span><!----><!----><!----></div><!----></div><!----></div>';
+                    
                    }
                 }
             });  
+         
         };
     }
 });
 //End of IDD Renewal Notice
+
   /*Add Report a Problem Link below Send To*/
   app.component('prmActionListAfter', {
     template: '<br><a href="https://libraries.usc.edu/form/need-help-report-problem" referrerpolicy="no-referrer-when-downgrade" target="_blank" style="float:right;" class="md-primoExplore-theme"><b>Need Help? Report a Problem</b></a>'
@@ -416,5 +423,6 @@ app.component('prmLoanAfter', {
   })();
   
   /************************************* END libchat widget *************************************/
+  (function () {
 
-  
+  })(); 
