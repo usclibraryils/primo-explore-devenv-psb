@@ -424,5 +424,22 @@ app.component('prmLoanAfter', {
   
   /************************************* END libchat widget *************************************/
   (function () {
+    var e = document.createElement('noscript');
+    e.innerHTML='<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKSVLSB" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
+    document.body.prepend(e);
+    //START - GA4
+    var googleAnalyticsUrl = document.createElement('script');
+    googleAnalyticsUrl.src = "https://www.googletagmanager.com/gtag/js?id=G-CMGZ809JXT";
+    googleAnalyticsUrl.type = 'text/javascript';
+    googleAnalyticsUrl.async = true;
+    document.head.appendChild(googleAnalyticsUrl);
 
+    var googleAnalyticsCode = document.createElement('script');
+    googleAnalyticsCode.innerHTML = `window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CMGZ809JXT');`;
+    document.head.appendChild(googleAnalyticsCode); 
+
+    //END - GA4
   })(); 
