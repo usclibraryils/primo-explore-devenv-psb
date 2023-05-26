@@ -1,1 +1,1 @@
-{"prm-search-result-availability-line-after":["primo-studio-browzine"],"prm-full-view-after":["primo-studio-altmetrics"]}
+{"prm-search-result-availability-line-after":["primo-studio-browzine"]}
