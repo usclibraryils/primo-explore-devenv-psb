@@ -143,7 +143,7 @@ app.component('prmLoanAfter', {
 
   /*Add Report a Problem Link below Send To*/
   app.component('prmActionListAfter', {
-    template: '<br><a href="https://libraries.usc.edu/form/need-help-report-problem" referrerpolicy="no-referrer-when-downgrade" target="_blank" style="float:right;" class="md-primoExplore-theme"><b>Need Help? Report a Problem</b></a>'
+    template: '<br><a href="https://usc-lib1:usc-lib1@stg.libraries.usc.edu/form/need-help-report-problem" referrerpolicy="no-referrer-when-downgrade" target="_blank" style="float:right;" class="md-primoExplore-theme"><b>Need Help? Report a Problem</b></a>'
   });
   /*End of Add Report a Problem Link below Send To*/
 })();
