@@ -158,7 +158,7 @@
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     letter-spacing: 0;
-    color: #4387bc; }
+    color: #275079; }
     .md-button.button-as-link:hover:not([disabled]), .bar prm-authentication .md-button:hover:not([disabled]), .md-button.button-as-link:focus:not([disabled]), .bar prm-authentication .md-button:focus:not([disabled]), .md-button.button-as-link.hovered:not([disabled]), .bar prm-authentication .md-button.hovered:not([disabled]), .md-button.button-as-link.md-focused:not([disabled]), .bar prm-authentication .md-button.md-focused:not([disabled]), .md-button.button-as-link._md-focused:not([disabled]), .bar prm-authentication .md-button._md-focused:not([disabled]) {
       color: #990000;
       background-color: white; }
@@ -888,3 +888,12 @@ md-list.prm-list.prm-linkable-list-items .md-button.arrow-link-button md-list-it
     color: black; }
 
 /* primary color hook end*/
+/* customization */
+
+/* Add some CSS properties inside the ruleset */
+span[translate='nui.locations.header'] {
+  text-transform: none;
+}
+.person-name-btn {
+  color: #275079;
+}
