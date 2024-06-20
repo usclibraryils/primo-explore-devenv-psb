@@ -894,6 +894,6 @@ md-list.prm-list.prm-linkable-list-items .md-button.arrow-link-button md-list-it
 span[translate='nui.locations.header'] {
   text-transform: none;
 }
-.person-name-btn {
+prm-linked-data .person-name-btn {
   color: #275079;
 }
