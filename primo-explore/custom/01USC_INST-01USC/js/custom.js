@@ -117,7 +117,7 @@ app.component('prmSearchResultAvailabilityLineAfter', {
 //Auto generated code by primo app store DO NOT DELETE!!! -END-
 
 //Auto generated code by primo app store DO NOT DELETE!!! -START-
-angular.module('hathiTrustAvailability', []).value('hathiTrustIconPath', 'custom/CENTRAL_PACKAGE/img/hathitrust.svg').constant('hathiTrustBaseUrl', "https://catalog.hathitrust.org/api/volumes/brief/json/").config(['$sceDelegateProvider', 'hathiTrustBaseUrl', function ($sceDelegateProvider, hathiTrustBaseUrl) {
+angular.module('hathiTrustAvailability', []).value('hathiTrustIconPath', 'custom/01USC_INST-01USC/img/hathitrust.svg').constant('hathiTrustBaseUrl', "https://catalog.hathitrust.org/api/volumes/brief/json/").config(['$sceDelegateProvider', 'hathiTrustBaseUrl', function ($sceDelegateProvider, hathiTrustBaseUrl) {
   var urlWhitelist = $sceDelegateProvider.resourceUrlWhitelist();
   urlWhitelist.push(hathiTrustBaseUrl + '**');
   $sceDelegateProvider.resourceUrlWhitelist(urlWhitelist);
