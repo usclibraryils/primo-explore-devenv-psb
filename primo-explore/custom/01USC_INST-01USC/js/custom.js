@@ -58,7 +58,7 @@ var app = angular.module('viewCustom', ['angularLoad','hathiTrustAvailability'])
 */
 
 app.component('prmSearchResultAvailabilityLineAfter', {
-  template: '<hathi-trust-availability></hathi-trust-availability>'
+  template: '<hathi-trust-availability entity-id="urn:mace:incommon:usc.edu"></hathi-trust-availability>'
 });
 
 angular.module('hathiTrustAvailability', []).constant('hathiTrustBaseUrl', 'https://catalog.hathitrust.org/api/volumes/brief/json/').config(['$sceDelegateProvider', 'hathiTrustBaseUrl', function ($sceDelegateProvider, hathiTrustBaseUrl) {
