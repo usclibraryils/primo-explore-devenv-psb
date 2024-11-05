@@ -1794,3 +1794,12 @@ span.umnHathiTrustLink md-icon svg {
 span.umnHathiTrustLink:hover md-icon svg {
   filter: grayscale(0%);
 }
+
+
+/* #Ticket07753921 allow mutiple line for access model display */
+
+md-list-item.md-2-line .md-list-item-text h4, md-list-item.md-2-line>.md-no-style .md-list-item-text h4, md-list-item.md-3-line .md-list-item-text h4, md-list-item.md-3-line>.md-no-style .md-list-item-text h4 {
+  white-space: break-spaces;
+  word-break: normal;
+  }
+  
