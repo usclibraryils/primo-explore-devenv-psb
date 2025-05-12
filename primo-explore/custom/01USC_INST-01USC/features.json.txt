@@ -1,1 +1,1 @@
-{"prm-search-result-availability-line-after":["primo-studio-browzine","hathi-trust-availability-studio"],"prm-loan-after":["prm-loan-after-app-store-generated"],"prm-action-list-after":["prm-action-list-after-app-store-generated"]}
+{"prm-search-result-availability-line-after":["primo-studio-browzine","prm-search-result-availability-line-after-app-store-generated"],"prm-loan-after":["prm-loan-after-app-store-generated","prm-loan-after-app-store-generated"],"prm-action-list-after":["prm-action-list-after-app-store-generated"],"prm-full-view-after":["primo-studio-altmetrics"]}
